@@ -1,16 +1,17 @@
-# React + Vite
+# weblab5
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This repository contains my solution for Web Lab 5. It is a simple product dashboard created with React and Vite.
 
-Currently, two official plugins are available:
+## File organization
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `src/main.jsx`: Main entry point that renders the App component into the root element.
+- `src/App.jsx`: Main application component that manages state for the input name and toggling the product list visibility.
+- `src/components/Card.jsx`: Reusable layout component using the children prop for consistent styling.
+- `src/components/Product.jsx`: Reusable component displaying a single product's title and price inside a Card.
+- `src/components/ProductList.jsx`: Renders the list of products by mapping through the static product data array.
 
-## React Compiler
+## Challenges faced
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- Setting up the Card component with the children prop so it works as a generic wrapper without depending on the inner content.
+- Managing the controlled text input state cleanly so the greeting updates as the user types.
+- Toggling the button text dynamically between "Show Products" and "Hide Products" while conditionally rendering the ProductList.
